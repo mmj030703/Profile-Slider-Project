@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --primaryFont: 'Roboto', sans-serif;
+    --primaryColor: rgb(73, 166, 233);
+    --secondaryColor: rgb(16, 42, 66);
+    --letterSpacing: 5px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.review {
+    display: grid;
+    place-items: center;
+}
+
+.review>h1 {
+    font-family: var(--primaryFont);
+    letter-spacing: var(--letterSpacing);
+    color: var(--secondaryColor);
+    position: relative;
+    margin: 0px 0px 70px 0px;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.review>h1::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    height: 100%;
+    width: 80px;
+    border-bottom: 4px solid var(--primaryColor);
+}
+
+.review-container {
+    display: grid;
+    place-items: center;
+    position: relative;
+    box-shadow: 0px 0px 10px 2px #dad3d3;
+    padding: 20px 0px;
+    width: 50%;
+    width: 550px;
+}
+
+.review-container .review-profile {
+    display: grid;
+    place-items: center;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+.review-container .review2,
+.review-container .review3,
+.review-container .review4 {
+    display: none;
+}
+
+.review-container .profile-picture {
+    position: relative;
+    height: 150px;
+    width: 160px;
+    height: 150px;
+    width: 160px;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+    margin: 0px 0px 25px 0px;
+}
+
+.profile-picture img {
+    height: 100%;
+    width: 150px;
+    height: 150px;
+    width: 155px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 5px -4px;
+}
+
+.profile-picture i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: var(--primaryColor);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.name {
+    margin: 0px 0px 13px 0px;
+}
+
+.name .profile-name,
+.name .profile-profession {
+    font-family: var(--primaryFont);
+    font-size: 1rem;
+    letter-spacing: var(--letterSpacing);
+    color: var(--secondaryColor);
+    text-align: center;
+}
+
+.name .profile-profession {
+    letter-spacing: normal;
+    color: var(--primaryColor);
+    font-weight: normal;
+    font-size: .9rem;
+    margin: 5px 0px 0px 0px;
+}
+
+.description {
+    font-family: var(--primaryFont);
+    font-size: 1rem;
+    line-height: 25px;
+    color: hsla(210, 22%, 49%, 1);
+    text-align: center;
+}
+
+.slider-buttons {
+    user-select: none;
+}
+
+.slider-buttons i {
+    font-size: 1.3rem;
+    color: var(--primaryColor);
+    margin: 15px 8px;
+    cursor: pointer;
+}
+
+.surprise-me {
+    border: none;
+    border-top: 2px solid var(--primaryColor);
+    border-left: 2px solid var(--primaryColor);
+    color: var(--primaryColor);
+    padding: 4px 10px;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 1px var(--secondaryColor);
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.surprise-me:hover {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+}
+
+
+@media screen and (max-width: 600px) {
+    .review>h1 {
+        font-size: 2rem;
+    }
+
+    .review-container {
+        width: 85%;
+    }
+
+    .name .profile-name {
+        font-size: .9rem;
+    }
+
+    .name .profile-profession {
+        font-size: .8rem;
+    }
+}
